@@ -246,10 +246,28 @@ a:focus-visible {
   min-height: 76px;
 }
 
+.view-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view-stat img {
+  display: block;
+  width: auto;
+  height: 18px;
+  filter: grayscale(1) contrast(1.6);
+  opacity: 0.58;
+}
+
 @media (max-width: 760px) {
   .site-header,
   .site-footer {
     align-items: flex-start;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
   }
 
   .site-header {
