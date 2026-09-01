@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Studio System abstract preview">
+  <rect width="1200" height="1500" fill="#ead7cd"/>
+  <rect x="90" y="90" width="1020" height="1320" fill="none" stroke="#151515" stroke-width="6"/>
+  <g stroke="#446b54" stroke-width="5">
+    <path d="M110 150H1090M110 330H1090M110 510H1090M110 690H1090M110 870H1090M110 1050H1090M110 1230H1090"/>
+  </g>
+  <g fill="#ead7cd" stroke="#151515" stroke-width="4">
+    <rect x="180" y="260" width="840" height="54"/>
+    <rect x="180" y="520" width="840" height="54"/>
+    <rect x="180" y="780" width="840" height="54"/>
+    <rect x="180" y="1040" width="840" height="54"/>
+  </g>
+  <circle cx="600" cy="750" r="224" fill="none" stroke="#2f5f82" stroke-width="28"/>
+  <rect x="305" y="335" width="590" height="830" fill="none" stroke="#151515" stroke-width="5"/>
+</svg>
