@@ -19,7 +19,7 @@ evadaniel.com
 
 ## Customize
 
-- Replace placeholder about, work experience, and project text in `index.html`.
+- Replace placeholder about, work experience, and project text in their matching HTML files.
 - Replace the four images in `assets/`.
 - Replace `cv.html` with your real CV content, or link the nav item to a PDF.
 - Replace `assets/eva-daniel-cv-placeholder.txt` with your real CV when ready.
