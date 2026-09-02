@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eva Daniel / Contact</title>
+    <meta name="description" content="Contact Eva Daniel." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="index.html">EVA DANIEL</a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html" aria-current="page">CONTACT</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-section page-section" aria-labelledby="contact-title">
+        <div class="section-label">
+          <h1 id="contact-title">CONTACT FORM</h1>
+          <p>Send a note and it will open as an email draft.</p>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>NAME</span>
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>EMAIL</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>MESSAGE</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a href="mailto:hello@evadaniel.com">HELLO@EVADANIEL.COM</a>
+      <span>EVADANIEL.COM</span>
+      <a href="cv.html">CV</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
