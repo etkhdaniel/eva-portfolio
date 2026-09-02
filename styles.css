@@ -122,8 +122,10 @@ a:focus-visible {
 }
 
 .rail-section,
-.play-section,
-.info-section {
+.info-section,
+.experience-section,
+.contact-section,
+.cv-section {
   display: grid;
   grid-template-columns: minmax(140px, 0.26fr) minmax(0, 1fr);
   gap: clamp(22px, 4vw, 52px);
@@ -192,6 +194,111 @@ a:focus-visible {
   color: var(--muted);
   font-size: 15px;
   letter-spacing: 0;
+}
+
+.experience-list {
+  border-top: 1px solid var(--line);
+}
+
+.experience-row {
+  display: grid;
+  grid-template-columns: 110px minmax(160px, 0.35fr) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 36px);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-row p,
+.experience-row h3 {
+  margin: 0;
+}
+
+.experience-row > p:first-child,
+.experience-row h3 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.experience-row > p:last-child {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  max-width: 760px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  padding: 14px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.contact-form button,
+.text-button {
+  justify-self: start;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.contact-form button:hover,
+.text-button:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.cv-copy {
+  display: grid;
+  gap: 24px;
+  max-width: 760px;
+}
+
+.cv-copy p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.02;
 }
 
 .play-grid {
@@ -270,9 +377,15 @@ a:focus-visible {
 
   .hero-meta,
   .rail-section,
-  .play-section,
   .info-section,
+  .experience-section,
+  .contact-section,
+  .cv-section,
   .info-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-row {
     grid-template-columns: 1fr;
   }
 
