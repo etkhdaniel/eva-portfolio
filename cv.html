@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Eva Daniel / CV</title>
-    <meta name="description" content="CV placeholder for Eva Daniel." />
+    <meta name="description" content="CV download for Eva Daniel." />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -12,23 +12,36 @@
     <header class="site-header" aria-label="Primary">
       <a class="brand" href="index.html">EVA DANIEL</a>
       <nav class="nav-links">
-        <a href="index.html#top">HOME</a>
-        <a href="index.html#about">ABOUT</a>
-        <a href="index.html#experience">EXPERIENCE</a>
-        <a href="index.html#projects">PROJECTS</a>
-        <a href="index.html#contact">CONTACT</a>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="cv.html" aria-current="page">CV</a>
       </nav>
     </header>
+
     <main>
-      <section class="hero cv-hero" aria-labelledby="cv-title">
-        <p class="kicker">CV</p>
-        <h1 id="cv-title">My up-to-date CV is coming soon.</h1>
-        <div class="hero-meta">
-          <a href="mailto:hello@evadaniel.com">HELLO@EVADANIEL.COM</a>
-          <a href="index.html">HOME</a>
-          <span>EVADANIEL.COM</span>
+      <section class="cv-section page-section" aria-labelledby="cv-title">
+        <div class="section-label">
+          <h1 id="cv-title">CV DOWNLOAD</h1>
+        </div>
+        <div class="cv-copy">
+          <p>
+            My up-to-date CV is coming soon. For now, this download is a
+            placeholder so the site structure is ready.
+          </p>
+          <a class="text-button" href="assets/eva-daniel-cv-placeholder.txt" download>
+            DOWNLOAD CV
+          </a>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <a href="mailto:hello@evadaniel.com">HELLO@EVADANIEL.COM</a>
+      <span>EVADANIEL.COM</span>
+      <a href="index.html">HOME</a>
+    </footer>
   </body>
 </html>
