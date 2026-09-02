@@ -22,10 +22,12 @@
     <header class="site-header" aria-label="Primary">
       <a class="brand" href="#top" aria-label="Eva Daniel home">EVA DANIEL</a>
       <nav class="nav-links">
-        <a href="#work">WORK</a>
-        <a href="#play">PLAY</a>
-        <a href="#info">INFO</a>
-        <a href="cv.html" aria-label="Eva Daniel CV placeholder">CV</a>
+        <a href="#top">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#cv">CV</a>
       </nav>
     </header>
 
@@ -42,10 +44,50 @@
         </div>
       </section>
 
-      <section id="work" class="rail-section" aria-labelledby="work-title">
+      <section id="about" class="info-section" aria-labelledby="about-title">
         <div class="section-label">
-          <h2 id="work-title">WORK</h2>
-          <p>Selected projects. Replace these with your real pieces when ready.</p>
+          <h2 id="about-title">ABOUT ME</h2>
+        </div>
+        <div class="info-copy">
+          <p>
+            I am Eva Daniel. This site is a compact home for selected work,
+            experiments, and useful ways to get in touch.
+          </p>
+          <p>
+            I care about clear systems, thoughtful interfaces, and digital
+            experiences that make complicated things easier to understand.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience" class="experience-section" aria-labelledby="experience-title">
+        <div class="section-label">
+          <h2 id="experience-title">WORK EXPERIENCE</h2>
+          <p>Add your current and past roles here when you are ready.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-row">
+            <p>2026</p>
+            <h3>Current Role</h3>
+            <p>Short description of your work, responsibilities, and impact.</p>
+          </article>
+          <article class="experience-row">
+            <p>2025</p>
+            <h3>Previous Experience</h3>
+            <p>Another role, internship, research position, or project-based experience.</p>
+          </article>
+          <article class="experience-row">
+            <p>2024</p>
+            <h3>New Media Certificate</h3>
+            <p>Capstone work exploring product design, storytelling, and interactive media.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="rail-section" aria-labelledby="projects-title">
+        <div class="section-label">
+          <h2 id="projects-title">PROJECTS</h2>
+          <p>Selected projects, prototypes, and visual work.</p>
         </div>
 
         <div class="work-rail" aria-label="Selected projects">
@@ -87,35 +129,41 @@
         </div>
       </section>
 
-      <section id="play" class="play-section" aria-labelledby="play-title">
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
         <div class="section-label">
-          <h2 id="play-title">PLAY</h2>
-          <p>Small side quests and visual exercises.</p>
+          <h2 id="contact-title">CONTACT FORM</h2>
+          <p>Send a note and it will open as an email draft.</p>
         </div>
 
-        <div class="play-grid">
-          <a href="#" aria-label="Open color studies placeholder">COLOR STUDIES</a>
-          <a href="#" aria-label="Open sketches placeholder">SKETCHES</a>
-          <a href="#" aria-label="Open reading list placeholder">READING LIST</a>
-          <a href="#" aria-label="Open tiny tools placeholder">TINY TOOLS</a>
-        </div>
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>NAME</span>
+            <input name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>EMAIL</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>MESSAGE</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button type="submit">SEND</button>
+        </form>
       </section>
 
-      <section id="info" class="info-section" aria-labelledby="info-title">
+      <section id="cv" class="cv-section" aria-labelledby="cv-title">
         <div class="section-label">
-          <h2 id="info-title">INFO</h2>
+          <h2 id="cv-title">CV DOWNLOAD</h2>
         </div>
-        <div class="info-copy">
+        <div class="cv-copy">
           <p>
-            I am Eva Daniel. This site is a compact home for selected work,
-            experiments, and useful ways to get in touch.
+            My up-to-date CV is coming soon. For now, this download is a
+            placeholder so the site structure is ready.
           </p>
-          <p>
-            The structure is intentionally simple: a landing statement, a visual
-            project rail, a play area, and direct links. Swap the placeholder
-            project titles, descriptions, images, email, LinkedIn URL, and CV
-            file to make it fully yours.
-          </p>
+          <a class="text-button" href="assets/eva-daniel-cv-placeholder.txt" download>
+            DOWNLOAD CV
+          </a>
         </div>
       </section>
     </main>
@@ -123,7 +171,7 @@
     <footer class="site-footer">
       <a href="mailto:hello@evadaniel.com">HELLO@EVADANIEL.COM</a>
       <span>EVADANIEL.COM</span>
-      <a href="#top">HOME</a>
+      <a href="#top">TOP</a>
     </footer>
 
     <script src="script.js"></script>
