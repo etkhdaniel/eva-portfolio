@@ -19,7 +19,8 @@ evadaniel.com
 
 ## Customize
 
-- Replace placeholder project names and descriptions in `index.html`.
+- Replace placeholder about, work experience, and project text in `index.html`.
 - Replace the four images in `assets/`.
 - Replace `cv.html` with your real CV content, or link the nav item to a PDF.
-- Update the email address and LinkedIn URL in `index.html`.
+- Replace `assets/eva-daniel-cv-placeholder.txt` with your real CV when ready.
+- Update the email address in `index.html` and `script.js` if needed.
