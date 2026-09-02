@@ -36,6 +36,12 @@ a:hover {
   color: var(--accent);
 }
 
+a[aria-current="page"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 a:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 4px;
@@ -107,6 +113,10 @@ a:focus-visible {
   line-height: 0.94;
 }
 
+.page-section {
+  min-height: calc(100svh - 56px);
+}
+
 .hero-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -139,9 +149,18 @@ a:focus-visible {
   align-self: start;
 }
 
+.section-label h1,
 .section-label h2,
 .section-label p {
   margin: 0;
+}
+
+.section-label h1 {
+  color: var(--muted);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .section-label p {
@@ -182,6 +201,7 @@ a:focus-visible {
   border: 1px solid var(--line);
 }
 
+.project-card h2,
 .project-card h3 {
   margin: 14px 0 4px;
   font-size: 13px;
@@ -209,11 +229,13 @@ a:focus-visible {
 }
 
 .experience-row p,
+.experience-row h2,
 .experience-row h3 {
   margin: 0;
 }
 
 .experience-row > p:first-child,
+.experience-row h2,
 .experience-row h3 {
   font-size: 13px;
   font-weight: 700;
