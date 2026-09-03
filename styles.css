@@ -199,6 +199,10 @@ a:focus-visible {
   border: 1px solid var(--line);
 }
 
+.gknow-card img {
+  aspect-ratio: 900 / 641;
+}
+
 .project-card h2,
 .project-card h3 {
   margin: 14px 0 4px;
