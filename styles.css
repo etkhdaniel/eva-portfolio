@@ -47,8 +47,7 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-.site-header,
-.site-footer {
+.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,8 +90,7 @@ a:focus-visible {
 
 .kicker,
 .hero-meta,
-.section-label,
-.site-footer {
+.section-label {
   color: var(--muted);
   font-size: 12px;
   font-weight: 700;
@@ -371,18 +369,9 @@ a:focus-visible {
   line-height: 1.05;
 }
 
-.site-footer {
-  min-height: 76px;
-}
-
 @media (max-width: 760px) {
-  .site-header,
-  .site-footer {
+  .site-header {
     align-items: flex-start;
-  }
-
-  .site-footer {
-    flex-wrap: wrap;
   }
 
   .site-header {
