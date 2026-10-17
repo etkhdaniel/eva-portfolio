@@ -133,7 +133,8 @@ a:focus-visible {
 .info-section,
 .experience-section,
 .contact-section,
-.cv-section {
+.cv-section,
+.journal-section {
   display: grid;
   grid-template-columns: minmax(140px, 0.26fr) minmax(0, 1fr);
   gap: clamp(22px, 4vw, 52px);
@@ -259,6 +260,59 @@ a:focus-visible {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.journal-copy {
+  display: grid;
+  max-width: 920px;
+  border-top: 1px solid var(--line);
+}
+
+.journal-intro {
+  margin: 0;
+  padding: 0 0 clamp(34px, 5vw, 68px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3.4vw, 46px);
+  line-height: 1.06;
+}
+
+.journal-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.28fr) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 54px);
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.journal-row > p,
+.journal-row h2,
+.journal-row div p {
+  margin: 0;
+}
+
+.journal-row > p,
+.journal-row h2 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.journal-row div {
+  display: grid;
+  gap: 7px;
+}
+
+.journal-row div p {
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.journal-status {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .contact-form {
@@ -387,15 +441,15 @@ a:focus-visible {
 
 @media (max-width: 760px) {
   .site-header {
-    align-items: flex-start;
-  }
-
-  .site-header {
+    display: grid;
+    align-items: start;
+    gap: 14px;
     position: static;
   }
 
   .nav-links {
-    gap: 12px;
+    justify-content: flex-start;
+    gap: 10px 16px;
   }
 
   .hero {
@@ -408,11 +462,13 @@ a:focus-visible {
   .experience-section,
   .contact-section,
   .cv-section,
+  .journal-section,
   .info-copy {
     grid-template-columns: 1fr;
   }
 
-  .experience-row {
+  .experience-row,
+  .journal-row {
     grid-template-columns: 1fr;
   }
 
