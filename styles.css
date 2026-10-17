@@ -232,6 +232,144 @@ a:focus-visible {
   letter-spacing: 0;
 }
 
+.project-card .project-meta {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.project-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.case-study {
+  min-width: 0;
+}
+
+.case-hero {
+  min-height: calc(100svh - 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+  align-items: center;
+  gap: clamp(30px, 6vw, 90px);
+  padding: clamp(34px, 6vw, 82px) clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+}
+
+.case-hero-copy {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+}
+
+.case-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6.2vw, 86px);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.case-lead {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.case-link {
+  width: fit-content;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid currentColor;
+}
+
+.case-hero-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  justify-self: end;
+  object-fit: contain;
+}
+
+.case-overview {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.28fr) minmax(0, 1fr);
+  gap: clamp(30px, 6vw, 90px);
+  padding: clamp(42px, 7vw, 96px) clamp(18px, 5vw, 72px);
+}
+
+.case-facts,
+.case-sections {
+  border-top: 1px solid var(--line);
+}
+
+.case-fact {
+  display: grid;
+  gap: 5px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-fact h2,
+.case-fact p,
+.case-section h2,
+.case-section p,
+.case-list {
+  margin: 0;
+}
+
+.case-fact h2,
+.case-section h2 {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.case-fact p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.case-section {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.25fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 54px);
+  padding: clamp(26px, 4vw, 46px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-section > div {
+  display: grid;
+  gap: 16px;
+}
+
+.case-section p,
+.case-list {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.case-list {
+  display: grid;
+  gap: 10px;
+  padding-left: 18px;
+}
+
 .experience-list {
   border-top: 1px solid var(--line);
 }
@@ -538,8 +676,20 @@ a:focus-visible {
   .contact-section,
   .cv-section,
   .journal-section,
-  .info-copy {
+  .info-copy,
+  .case-hero,
+  .case-overview,
+  .case-section {
     grid-template-columns: 1fr;
+  }
+
+  .case-hero {
+    min-height: auto;
+  }
+
+  .case-hero-image {
+    max-width: 560px;
+    justify-self: center;
   }
 
   .experience-row,
