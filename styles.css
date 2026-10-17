@@ -267,6 +267,23 @@ a:focus-visible {
   font-size: 15px;
 }
 
+.education-details {
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.education-details span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .experience-title {
   display: grid;
   align-content: start;
