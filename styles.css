@@ -223,6 +223,23 @@ a:focus-visible {
   border-top: 1px solid var(--line);
 }
 
+.resume-content {
+  display: grid;
+  gap: clamp(48px, 7vw, 88px);
+}
+
+.resume-group {
+  min-width: 0;
+}
+
+.resume-group-title {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .experience-row {
   display: grid;
   grid-template-columns: 110px minmax(160px, 0.35fr) minmax(0, 1fr);
@@ -260,6 +277,34 @@ a:focus-visible {
   margin: 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.skills-list {
+  border-top: 1px solid var(--line);
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.28fr) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 54px);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skill-row h3,
+.skill-row p {
+  margin: 0;
+}
+
+.skill-row h3 {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.skill-row p {
+  max-width: 48rem;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .journal-copy {
@@ -468,6 +513,7 @@ a:focus-visible {
   }
 
   .experience-row,
+  .skill-row,
   .journal-row {
     grid-template-columns: 1fr;
   }
