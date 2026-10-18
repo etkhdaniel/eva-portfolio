@@ -1005,6 +1005,15 @@ a:focus-visible {
   width: min(620px, 100%);
 }
 
+.photo-route-map figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .photo-essay-title-long {
   max-width: 980px;
   font-size: 62px !important;
