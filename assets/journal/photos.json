@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "idFormat": "VN24-##",
+  "version": 2,
+  "idFormat": "TRIP-## (currently VN24-## and EU18-##)",
   "photos": [
     {
       "id": "VN24-01",
@@ -19,7 +19,7 @@
       "alt": "Rocky shoreline framed by limestone cliffs and distant islands",
       "trip": "Vietnam, December 2024",
       "tripOrder": 2,
-      "snapshotOrder": 4,
+      "snapshotOrder": 7,
       "caption": ""
     },
     {
@@ -29,7 +29,7 @@
       "alt": "Lakeside street, yellow flowers, and mountains beneath blue morning light",
       "trip": "Vietnam, December 2024",
       "tripOrder": 6,
-      "snapshotOrder": 2,
+      "snapshotOrder": 3,
       "caption": ""
     },
     {
@@ -39,7 +39,7 @@
       "alt": "Passenger boat and tender surrounded by limestone islands",
       "trip": "Vietnam, December 2024",
       "tripOrder": 4,
-      "snapshotOrder": 9,
+      "snapshotOrder": 17,
       "caption": ""
     },
     {
@@ -49,7 +49,7 @@
       "alt": "Rowboats crossing turquoise water between limestone cliffs",
       "trip": "Vietnam, December 2024",
       "tripOrder": 3,
-      "snapshotOrder": 7,
+      "snapshotOrder": 13,
       "caption": ""
     },
     {
@@ -59,7 +59,7 @@
       "alt": "Dark stone monument rising above a green, misty hillside",
       "trip": "Vietnam, December 2024",
       "tripOrder": 11,
-      "snapshotOrder": 10,
+      "snapshotOrder": 18,
       "caption": ""
     },
     {
@@ -69,7 +69,7 @@
       "alt": "Colorful Vietnamese meal with soup, spring rolls, greens, and flowers",
       "trip": "Vietnam, December 2024",
       "tripOrder": 7,
-      "snapshotOrder": 5,
+      "snapshotOrder": 9,
       "caption": ""
     },
     {
@@ -79,7 +79,7 @@
       "alt": "Historic brick pagoda framed by trees after rain",
       "trip": "Vietnam, December 2024",
       "tripOrder": 10,
-      "snapshotOrder": 6,
+      "snapshotOrder": 11,
       "caption": ""
     },
     {
@@ -89,7 +89,7 @@
       "alt": "Dense evening motorbike traffic beneath illuminated storefront signs",
       "trip": "Vietnam, December 2024",
       "tripOrder": 8,
-      "snapshotOrder": 3,
+      "snapshotOrder": 5,
       "caption": ""
     },
     {
@@ -99,7 +99,7 @@
       "alt": "City building filled with restaurants, signs, flags, and balconies",
       "trip": "Vietnam, December 2024",
       "tripOrder": 9,
-      "snapshotOrder": 8,
+      "snapshotOrder": 15,
       "caption": ""
     },
     {
@@ -109,7 +109,87 @@
       "alt": "Passenger boats glowing at sunset among limestone cliffs",
       "trip": "Vietnam, December 2024",
       "tripOrder": 5,
-      "snapshotOrder": 11,
+      "snapshotOrder": 19,
+      "caption": ""
+    },
+    {
+      "id": "EU18-01",
+      "title": "Valley bridges",
+      "file": "assets/journal/europe-2018/europe-01-luxembourg-valley.jpg",
+      "alt": "Green valley crossed by stone bridges in Luxembourg",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 1,
+      "snapshotOrder": 6,
+      "caption": ""
+    },
+    {
+      "id": "EU18-02",
+      "title": "Heidelberg from above",
+      "file": "assets/journal/europe-2018/europe-02-heidelberg.jpg",
+      "alt": "Heidelberg rooftops, river, and old bridge beneath cloudy skies",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 2,
+      "snapshotOrder": 2,
+      "caption": ""
+    },
+    {
+      "id": "EU18-03",
+      "title": "Mountain light",
+      "file": "assets/journal/europe-2018/europe-03-mountain-light.jpg",
+      "alt": "Green mountain slopes and rural homes beneath a bright blue sky",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 3,
+      "snapshotOrder": 10,
+      "caption": ""
+    },
+    {
+      "id": "EU18-04",
+      "title": "Village in the valley",
+      "file": "assets/journal/europe-2018/europe-04-valley-village.jpg",
+      "alt": "Red-roofed village tucked along a broad green valley",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 4,
+      "snapshotOrder": 16,
+      "caption": ""
+    },
+    {
+      "id": "EU18-05",
+      "title": "Cliffside village",
+      "file": "assets/journal/europe-2018/europe-05-cliffside-village.jpg",
+      "alt": "Historic stone buildings rising above a green French hillside",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 5,
+      "snapshotOrder": 4,
+      "caption": ""
+    },
+    {
+      "id": "EU18-06",
+      "title": "Across the blue water",
+      "file": "assets/journal/europe-2018/europe-06-blue-water.jpg",
+      "alt": "Rocky Mediterranean coast and deep blue water near Marseille",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 6,
+      "snapshotOrder": 12,
+      "caption": ""
+    },
+    {
+      "id": "EU18-07",
+      "title": "Marseille harbor",
+      "file": "assets/journal/europe-2018/europe-07-marseille-harbor.jpg",
+      "alt": "Sailboat crossing Marseille harbor beneath the city skyline",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 7,
+      "snapshotOrder": 8,
+      "caption": ""
+    },
+    {
+      "id": "EU18-08",
+      "title": "Open-air concert",
+      "file": "assets/journal/europe-2018/europe-08-open-air-concert.jpg",
+      "alt": "Musicians performing for a crowd in an outdoor amphitheater",
+      "trip": "France, Germany, Luxembourg & Switzerland, 2018",
+      "tripOrder": 8,
+      "snapshotOrder": 14,
       "caption": ""
     }
   ]

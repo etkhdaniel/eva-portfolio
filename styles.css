@@ -747,6 +747,11 @@ a:focus-visible {
   border-bottom: 1px solid var(--line);
 }
 
+.journal-trip-list {
+  display: grid;
+  gap: 44px;
+}
+
 .journal-feature:hover {
   color: var(--ink);
 }
@@ -990,6 +995,20 @@ a:focus-visible {
 .photo-single {
   width: min(720px, 100%);
   margin: 0 auto !important;
+}
+
+.photo-single-wide {
+  width: min(1120px, 100%);
+}
+
+.photo-single-compact {
+  width: min(620px, 100%);
+}
+
+.photo-essay-title-long {
+  max-width: 980px;
+  font-size: 62px !important;
+  line-height: 1 !important;
 }
 
 .photo-story {
@@ -1332,6 +1351,11 @@ a:focus-visible {
 
   .photo-essay-header h1 {
     font-size: 54px;
+  }
+
+  .photo-essay-title-long {
+    font-size: 38px !important;
+    line-height: 1.04 !important;
   }
 
   .photo-essay-cover {
