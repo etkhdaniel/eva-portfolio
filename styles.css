@@ -1052,6 +1052,63 @@ a:focus-visible {
   line-height: 1.35;
 }
 
+.concert-program {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 36px 0 8px;
+  border-top: 1px solid var(--line);
+}
+
+.concert-program-note {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  padding-bottom: 36px;
+}
+
+.concert-program-note p {
+  margin: 0;
+}
+
+.concert-program-note p:last-child {
+  max-width: 720px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.concert-program-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.concert-program-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+
+.concert-program-list cite {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.concert-program-list span {
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
 .photo-story-closing {
   padding-top: 28px;
   border-top: 1px solid var(--line);
@@ -1399,6 +1456,34 @@ a:focus-visible {
 
   .photo-story p:last-child {
     font-size: 21px;
+  }
+
+  .concert-program {
+    padding-top: 28px;
+  }
+
+  .concert-program-note {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-bottom: 28px;
+  }
+
+  .concert-program-note p:last-child {
+    font-size: 21px;
+  }
+
+  .concert-program-list li {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 16px 0;
+  }
+
+  .concert-program-list cite {
+    font-size: 26px;
+  }
+
+  .concert-program-list span {
+    text-align: left;
   }
 
   .photo-interlude {
