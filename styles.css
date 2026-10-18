@@ -853,15 +853,15 @@ a:focus-visible {
 
 .snapshot-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 36px 20px;
 }
 
 .snapshot-grid img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
 }
 
 .snapshot-item {
@@ -1281,9 +1281,27 @@ a:focus-visible {
     padding: 36px 0;
   }
 
-  .journal-snapshot-grid,
-  .snapshot-grid {
+  .journal-snapshot-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .snapshot-item {
+    width: min(520px, 100%);
+    justify-self: center;
+  }
+
+  .snapshot-item figcaption {
+    display: grid;
+    gap: 2px;
+  }
+
+  .snapshot-item figcaption span:last-child {
+    text-align: left;
   }
 
   .snapshots-copy {
