@@ -147,7 +147,8 @@ a:focus-visible {
 .experience-section,
 .contact-section,
 .cv-section,
-.journal-section {
+.journal-section,
+.snapshots-section {
   display: grid;
   grid-template-columns: minmax(140px, 0.26fr) minmax(0, 1fr);
   gap: clamp(22px, 4vw, 52px);
@@ -694,36 +695,42 @@ a:focus-visible {
   line-height: 1.06;
 }
 
-.journal-row {
+.journal-group {
   display: grid;
-  grid-template-columns: minmax(130px, 0.28fr) minmax(0, 1fr);
-  gap: clamp(18px, 4vw, 54px);
-  padding: 22px 0;
+  gap: 28px;
+  padding: 46px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.journal-row > p,
-.journal-row h2,
-.journal-row div p {
+.journal-group-header {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.28fr) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 54px);
+}
+
+.journal-group-header > p,
+.journal-group-header h2,
+.journal-group-header div p {
   margin: 0;
 }
 
-.journal-row > p,
-.journal-row h2 {
+.journal-group-header > p,
+.journal-group-header h2 {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
 }
 
-.journal-row div {
+.journal-group-header div {
   display: grid;
   gap: 7px;
 }
 
-.journal-row div p {
+.journal-group-header div p {
   max-width: 42rem;
   color: var(--muted);
   font-size: 15px;
+  line-height: 1.5;
 }
 
 .journal-status {
@@ -763,11 +770,11 @@ a:focus-visible {
 }
 
 .journal-feature-copy p,
-.journal-feature-copy h2 {
+.journal-feature-copy h3 {
   margin: 0;
 }
 
-.journal-feature-copy h2 {
+.journal-feature-copy h3 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 42px;
   font-weight: 400;
@@ -793,6 +800,77 @@ a:focus-visible {
   margin-top: 24px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
+}
+
+.journal-snapshots {
+  display: grid;
+  gap: 18px;
+}
+
+.journal-snapshots:hover {
+  color: var(--ink);
+}
+
+.journal-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.journal-snapshot-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.journal-snapshot-link {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.snapshots-section {
+  align-items: start;
+}
+
+.snapshots-copy {
+  display: grid;
+  gap: 48px;
+  min-width: 0;
+}
+
+.snapshots-intro {
+  max-width: 760px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3.4vw, 46px);
+  line-height: 1.06;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.snapshot-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.snapshots-back {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .photo-essay {
@@ -1156,6 +1234,7 @@ a:focus-visible {
   .contact-section,
   .cv-section,
   .journal-section,
+  .snapshots-section,
   .info-copy,
   .case-hero,
   .case-chapter,
@@ -1166,9 +1245,23 @@ a:focus-visible {
   }
 
   .journal-feature,
+  .journal-group-header,
   .photo-essay-header,
   .photo-pair {
     grid-template-columns: 1fr;
+  }
+
+  .journal-group {
+    padding: 36px 0;
+  }
+
+  .journal-snapshot-grid,
+  .snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .snapshots-copy {
+    gap: 32px;
   }
 
   .journal-feature img {
