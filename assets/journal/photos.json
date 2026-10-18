@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "idFormat": "VN24-##",
+  "photos": [
+    {
+      "id": "VN24-01",
+      "title": "Floating home on the bay",
+      "file": "assets/journal/vietnam-2024/vietnam-01-water.jpg",
+      "alt": "Floating house on calm green water beneath limestone karsts",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 1,
+      "snapshotOrder": 1,
+      "caption": ""
+    },
+    {
+      "id": "VN24-02",
+      "title": "Rocky shoreline",
+      "file": "assets/journal/vietnam-2024/vietnam-02-rocks.jpg",
+      "alt": "Rocky shoreline framed by limestone cliffs and distant islands",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 2,
+      "snapshotOrder": 4,
+      "caption": ""
+    },
+    {
+      "id": "VN24-03",
+      "title": "Mountain town morning",
+      "file": "assets/journal/vietnam-2024/vietnam-03-mountain-street.jpg",
+      "alt": "Lakeside street, yellow flowers, and mountains beneath blue morning light",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 6,
+      "snapshotOrder": 2,
+      "caption": ""
+    },
+    {
+      "id": "VN24-04",
+      "title": "Cruise boat",
+      "file": "assets/journal/vietnam-2024/vietnam-04-cruise.jpg",
+      "alt": "Passenger boat and tender surrounded by limestone islands",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 4,
+      "snapshotOrder": 9,
+      "caption": ""
+    },
+    {
+      "id": "VN24-05",
+      "title": "Rowboats in the bay",
+      "file": "assets/journal/vietnam-2024/vietnam-05-rowboats.jpg",
+      "alt": "Rowboats crossing turquoise water between limestone cliffs",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 3,
+      "snapshotOrder": 7,
+      "caption": ""
+    },
+    {
+      "id": "VN24-06",
+      "title": "Misty monument",
+      "file": "assets/journal/vietnam-2024/vietnam-06-monument.jpg",
+      "alt": "Dark stone monument rising above a green, misty hillside",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 11,
+      "snapshotOrder": 10,
+      "caption": ""
+    },
+    {
+      "id": "VN24-07",
+      "title": "Lunch table",
+      "file": "assets/journal/vietnam-2024/vietnam-07-meal.jpg",
+      "alt": "Colorful Vietnamese meal with soup, spring rolls, greens, and flowers",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 7,
+      "snapshotOrder": 5,
+      "caption": ""
+    },
+    {
+      "id": "VN24-08",
+      "title": "Pagoda after rain",
+      "file": "assets/journal/vietnam-2024/vietnam-08-pagoda.jpg",
+      "alt": "Historic brick pagoda framed by trees after rain",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 10,
+      "snapshotOrder": 6,
+      "caption": ""
+    },
+    {
+      "id": "VN24-09",
+      "title": "Evening traffic",
+      "file": "assets/journal/vietnam-2024/vietnam-09-city-traffic.jpg",
+      "alt": "Dense evening motorbike traffic beneath illuminated storefront signs",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 8,
+      "snapshotOrder": 3,
+      "caption": ""
+    },
+    {
+      "id": "VN24-10",
+      "title": "City facade",
+      "file": "assets/journal/vietnam-2024/vietnam-10-city-building.jpg",
+      "alt": "City building filled with restaurants, signs, flags, and balconies",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 9,
+      "snapshotOrder": 8,
+      "caption": ""
+    },
+    {
+      "id": "VN24-11",
+      "title": "Bay at dusk",
+      "file": "assets/journal/vietnam-2024/vietnam-11-bay-sunset.jpg",
+      "alt": "Passenger boats glowing at sunset among limestone cliffs",
+      "trip": "Vietnam, December 2024",
+      "tripOrder": 5,
+      "snapshotOrder": 11,
+      "caption": ""
+    }
+  ]
+}
