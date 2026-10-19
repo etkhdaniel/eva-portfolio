@@ -822,10 +822,16 @@ a:focus-visible {
   gap: 10px;
 }
 
-.journal-snapshot-grid img {
+.journal-snapshot-frame {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.journal-snapshot-frame img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
 }
 
