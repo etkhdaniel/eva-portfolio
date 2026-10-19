@@ -1147,10 +1147,61 @@ a:focus-visible {
   letter-spacing: 0.04em;
 }
 
+.contact-content {
+  display: grid;
+  gap: 44px;
+  max-width: 760px;
+}
+
+.social-links {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.social-link:hover {
+  border-color: var(--ink);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.social-beli-icon circle {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-beli-icon path {
+  stroke: var(--paper);
+  stroke-width: 1.5;
+}
+
 .contact-form {
   display: grid;
   gap: 16px;
-  max-width: 760px;
 }
 
 .contact-form label {
