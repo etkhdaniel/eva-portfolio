@@ -364,44 +364,24 @@ a:focus-visible {
 
 .modeling-gallery {
   display: grid;
-  gap: clamp(72px, 10vw, 148px);
-  padding: clamp(72px, 10vw, 148px) clamp(18px, 6vw, 92px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 44px);
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 96px) clamp(18px, 5vw, 72px);
   background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
 
 .modeling-gallery figure {
+  aspect-ratio: 3 / 4;
   margin: 0;
+  overflow: hidden;
 }
 
-.modeling-pair {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
-  gap: clamp(24px, 5vw, 72px);
-}
-
-.modeling-pair-offset figure:last-child {
-  margin-top: clamp(60px, 9vw, 132px);
-}
-
-.modeling-single {
-  width: min(720px, 100%);
-  margin: 0 auto !important;
-}
-
-.modeling-single-wide {
-  width: min(900px, 100%);
-}
-
-.modeling-single-compact {
-  width: min(610px, 100%);
-}
-
-.modeling-single-right {
-  margin-right: max(0px, calc((100% - 1100px) / 2)) !important;
+.modeling-gallery img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .modeling-credit {
@@ -1591,8 +1571,7 @@ a:focus-visible {
   .journal-group-header,
   .photo-essay-header,
   .photo-pair,
-  .modeling-hero,
-  .modeling-pair {
+  .modeling-hero {
     grid-template-columns: 1fr;
   }
 
@@ -1626,20 +1605,9 @@ a:focus-visible {
   }
 
   .modeling-gallery {
-    gap: 64px;
+    grid-template-columns: 1fr;
+    gap: 24px;
     padding: 64px 18px;
-  }
-
-  .modeling-pair {
-    gap: 64px;
-  }
-
-  .modeling-pair-offset figure:last-child {
-    margin-top: 0;
-  }
-
-  .modeling-single-right {
-    margin-right: auto !important;
   }
 
   .modeling-credit {
