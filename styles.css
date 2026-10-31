@@ -218,6 +218,10 @@ a:focus-visible {
   aspect-ratio: 900 / 641;
 }
 
+.modeling-card img {
+  object-position: center 32%;
+}
+
 .project-card h2,
 .project-card h3 {
   margin: 14px 0 4px;
@@ -248,6 +252,169 @@ a:focus-visible {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.modeling-project {
+  min-width: 0;
+}
+
+.modeling-hero {
+  min-height: calc(100svh - 56px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(420px, 0.7fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 112px);
+  padding: clamp(48px, 7vw, 104px) clamp(18px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+}
+
+.modeling-hero-copy {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+}
+
+.modeling-hero h1 {
+  max-width: 680px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.modeling-lead {
+  max-width: 550px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.modeling-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-top: 10px;
+}
+
+.modeling-links a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid currentColor;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.modeling-hero-portrait {
+  width: min(560px, 100%);
+  margin: 0;
+  justify-self: end;
+}
+
+.modeling-hero-portrait img,
+.modeling-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.modeling-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.modeling-meta > div {
+  padding: 22px 28px;
+  border-right: 1px solid var(--line);
+}
+
+.modeling-meta > div:last-child {
+  border-right: 0;
+}
+
+.modeling-meta dt,
+.modeling-meta dd {
+  margin: 0;
+}
+
+.modeling-meta dt {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.modeling-meta dd {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modeling-gallery {
+  display: grid;
+  gap: clamp(72px, 10vw, 148px);
+  padding: clamp(72px, 10vw, 148px) clamp(18px, 6vw, 92px);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.modeling-gallery figure {
+  margin: 0;
+}
+
+.modeling-pair {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(24px, 5vw, 72px);
+}
+
+.modeling-pair-offset figure:last-child {
+  margin-top: clamp(60px, 9vw, 132px);
+}
+
+.modeling-single {
+  width: min(720px, 100%);
+  margin: 0 auto !important;
+}
+
+.modeling-single-wide {
+  width: min(900px, 100%);
+}
+
+.modeling-single-compact {
+  width: min(610px, 100%);
+}
+
+.modeling-single-right {
+  margin-right: max(0px, calc((100% - 1100px) / 2)) !important;
+}
+
+.modeling-credit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 42px clamp(18px, 5vw, 72px);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.modeling-credit p {
+  margin: 0;
+}
+
+.modeling-credit a {
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
 }
 
 .case-study {
@@ -1415,8 +1582,62 @@ a:focus-visible {
   .journal-feature,
   .journal-group-header,
   .photo-essay-header,
-  .photo-pair {
+  .photo-pair,
+  .modeling-hero,
+  .modeling-pair {
     grid-template-columns: 1fr;
+  }
+
+  .modeling-hero {
+    min-height: auto;
+    gap: 38px;
+    padding: 52px 18px;
+  }
+
+  .modeling-hero h1 {
+    font-size: 52px;
+  }
+
+  .modeling-hero-portrait {
+    width: min(520px, 100%);
+    justify-self: center;
+  }
+
+  .modeling-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .modeling-meta > div {
+    padding: 17px 18px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .modeling-meta > div:last-child {
+    border-bottom: 0;
+  }
+
+  .modeling-gallery {
+    gap: 64px;
+    padding: 64px 18px;
+  }
+
+  .modeling-pair {
+    gap: 64px;
+  }
+
+  .modeling-pair-offset figure:last-child {
+    margin-top: 0;
+  }
+
+  .modeling-single-right {
+    margin-right: auto !important;
+  }
+
+  .modeling-credit {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 34px 18px;
   }
 
   .journal-group {
