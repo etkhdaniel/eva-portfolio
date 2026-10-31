@@ -331,7 +331,7 @@ a:focus-visible {
 
 .modeling-meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin: 0;
   border-bottom: 1px solid var(--line);
 }
@@ -919,6 +919,10 @@ a:focus-visible {
   min-height: 460px;
   max-height: 650px;
   object-fit: cover;
+}
+
+.creative-feature img {
+  object-position: center 28%;
 }
 
 .journal-feature-copy {
