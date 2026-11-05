@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import parse from "html-react-parser";
 import { activeSections, navItems, pageTemplates } from "./pageTemplates.js";
 
@@ -48,12 +48,95 @@ function updateMetadata({ title, description }) {
   meta.setAttribute("content", description);
 }
 
+const introStorageKey = "eva-portfolio-intro-seen";
+
+function shouldShowIntro(page) {
+  if (page !== "index.html") return false;
+  if (new URLSearchParams(window.location.search).get("intro") === "1") return true;
+
+  try {
+    return window.localStorage.getItem(introStorageKey) !== "true";
+  } catch {
+    return true;
+  }
+}
+
+function IntroLoader({ onComplete }) {
+  const [isExiting, setIsExiting] = useState(false);
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const timer = window.setTimeout(() => setIsExiting(true), reducedMotion ? 850 : 2800);
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setIsExiting(true);
+    };
+
+    document.body.classList.add("intro-open");
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.classList.remove("intro-open");
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isExiting) return undefined;
+    const timer = window.setTimeout(onComplete, 560);
+    return () => window.clearTimeout(timer);
+  }, [isExiting, onComplete]);
+
+  return (
+    <div
+      className={`intro-loader${isExiting ? " is-exiting" : ""}`}
+      role="status"
+      aria-live="polite"
+      aria-label="Hello, I'm Eva Daniel"
+    >
+      <button className="intro-skip" type="button" onClick={() => setIsExiting(true)}>
+        SKIP
+      </button>
+      <div className="intro-lockup" aria-hidden="true">
+        <p>Hello, I&apos;m</p>
+        <h1>
+          <span className="intro-eva">
+            Eva
+            <svg className="intro-sprout" viewBox="0 0 64 72" focusable="false">
+              <path className="intro-stem" d="M32 69 C31 55 32 38 32 20" />
+              <path
+                className="intro-leaf intro-leaf-left"
+                d="M31 46 C20 46 12 38 11 27 C22 27 30 34 31 46 Z"
+              />
+              <path
+                className="intro-leaf intro-leaf-right"
+                d="M33 36 C34 25 42 18 53 18 C52 29 44 36 33 36 Z"
+              />
+            </svg>
+          </span>{" "}
+          Daniel
+        </h1>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const progressRef = useRef(null);
   const page = currentPage();
+  const [showIntro, setShowIntro] = useState(() => shouldShowIntro(page));
   const isJournalAlias = page === "journal.html";
   const template = pageTemplates[page] || pageTemplates["index.html"];
   const content = useMemo(() => readTemplate(template), [template]);
+
+  const completeIntro = useCallback(() => {
+    try {
+      window.localStorage.setItem(introStorageKey, "true");
+    } catch {
+      // The intro can still close when storage is unavailable.
+    }
+    setShowIntro(false);
+  }, []);
 
   useEffect(() => {
     if (isJournalAlias) {
@@ -208,6 +291,7 @@ function App() {
 
   return (
     <>
+      {showIntro && <IntroLoader onComplete={completeIntro} />}
       <div ref={progressRef} className="scroll-progress" aria-hidden="true" />
       <Header page={page} />
       <main onSubmit={handleSubmit}>{parse(content.main)}</main>
