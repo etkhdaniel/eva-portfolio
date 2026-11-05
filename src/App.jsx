@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import parse from "html-react-parser";
 import { activeSections, navItems, pageTemplates } from "./pageTemplates.js";
 
@@ -49,6 +49,7 @@ function updateMetadata({ title, description }) {
 }
 
 function App() {
+  const progressRef = useRef(null);
   const page = currentPage();
   const isJournalAlias = page === "journal.html";
   const template = pageTemplates[page] || pageTemplates["index.html"];
@@ -71,6 +72,114 @@ function App() {
 
     rail?.addEventListener("wheel", handleWheel, { passive: false });
     return () => rail?.removeEventListener("wheel", handleWheel);
+  }, [content, isJournalAlias]);
+
+  useEffect(() => {
+    if (isJournalAlias) return undefined;
+
+    const root = document.documentElement;
+    const header = document.querySelector(".site-header");
+    const hero = document.querySelector(".hero");
+    const heroCopy = document.querySelector(".hero-copy");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const revealSelectors = [
+      ".hero .kicker",
+      ".hero h1",
+      ".hero-copy > p",
+      ".hero-meta > *",
+      ".section-label > *",
+      ".info-copy > *",
+      ".resume-group",
+      ".project-card",
+      ".journal-intro",
+      ".journal-group-header",
+      ".journal-feature",
+      ".journal-snapshots",
+      ".snapshot-gallery figure",
+      ".snapshot-grid figure",
+      ".modeling-hero-copy > *",
+      ".modeling-hero-portrait",
+      ".modeling-meta > div",
+      ".modeling-gallery figure",
+      ".modeling-credit > *",
+      ".case-hero-copy > *",
+      ".case-hero-image",
+      ".case-meta > div",
+      ".case-chapter > .case-label",
+      ".case-chapter-body > *",
+      ".case-stat > *",
+      ".case-product > *",
+      ".contact-form > *",
+      ".photo-essay-header > *",
+      ".photo-essay-cover",
+      ".photo-sequence > *",
+      ".concert-program > *",
+      ".photo-essay-back",
+    ];
+    const revealItems = [...document.querySelectorAll(revealSelectors.join(","))];
+
+    root.classList.add("motion-ready");
+    revealItems.forEach((item, index) => {
+      item.classList.add("reveal-item");
+      item.style.setProperty("--reveal-delay", `${(index % 6) * 55}ms`);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -7%", threshold: 0.08 },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    let frame = 0;
+    const updateScrollEffects = () => {
+      frame = 0;
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+      progressRef.current?.style.setProperty("--scroll-progress", progress.toString());
+      header?.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+    const handleScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateScrollEffects);
+    };
+
+    const handleHeroPointer = (event) => {
+      if (!hero || !heroCopy || reduceMotion.matches) return;
+      const bounds = hero.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 8;
+      const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 6;
+      heroCopy.style.setProperty("--hero-x", `${x}px`);
+      heroCopy.style.setProperty("--hero-y", `${y}px`);
+    };
+    const resetHeroPointer = () => {
+      heroCopy?.style.setProperty("--hero-x", "0px");
+      heroCopy?.style.setProperty("--hero-y", "0px");
+    };
+
+    updateScrollEffects();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    hero?.addEventListener("pointermove", handleHeroPointer, { passive: true });
+    hero?.addEventListener("pointerleave", resetHeroPointer);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+      hero?.removeEventListener("pointermove", handleHeroPointer);
+      hero?.removeEventListener("pointerleave", resetHeroPointer);
+      if (frame) window.cancelAnimationFrame(frame);
+      root.classList.remove("motion-ready");
+      revealItems.forEach((item) => {
+        item.classList.remove("reveal-item", "is-visible");
+        item.style.removeProperty("--reveal-delay");
+      });
+    };
   }, [content, isJournalAlias]);
 
   const handleSubmit = (event) => {
@@ -99,6 +208,7 @@ function App() {
 
   return (
     <>
+      <div ref={progressRef} className="scroll-progress" aria-hidden="true" />
       <Header page={page} />
       <main onSubmit={handleSubmit}>{parse(content.main)}</main>
     </>
